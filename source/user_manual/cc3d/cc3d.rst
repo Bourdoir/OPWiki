@@ -97,7 +97,7 @@ CopterControl / CC3D / Atom have 4 ports.
 
   Servo output pin layout is
      * Outside --> ground
-     * Middle --> 5V - 15V
+     * Middle --> 5V
      * Inside --> signal
 
 * **MainPort (also previously known as Telemetry)**:
@@ -180,15 +180,10 @@ Power
   the ports section for the port location). When powered by USB, peripherals
   connected (receiver, serial ports, servos, ESCs) will not be powered to
   protect your computer from too much current draw through the USB.
-* The minimum allowed input voltage for CopterControl is 4.8V, the maximum
-  allowed input voltage is +15V.
+* The input voltage for CopterControl is 5V. If necessary use a "UBEC" to lower the voltage.
 * Power consumption = ±70mA.
 * You can connect the USB and the receiver (with the power) at the same time.
 
-.. caution:: The PWR Out pins provide unregulated voltage to the ports. If the
-   CC is powered from a +15V (max. allowed) source then +15V will be on the
-   PWR Out pins and can damage connected receivers, GPS, telemetry modems or
-   other add-on boards.
 
 If you power the flight controller through the servo connectors (utilising the
 BEC function of the speed controller), the positive power lead from only one
@@ -268,8 +263,8 @@ MainPort and FlexiPort serial cable pinout
 +=====+========+===============+==============+==============+==============+==============+
 | 1   | Black  | GND           | GND          | GND          | GND          | GND          |
 +-----+--------+---------------+--------------+--------------+--------------+--------------+
-| 2   | Red    | 4.8V -        | PWR          | PWR          | PWR          | PWR          |
-|     |        | 15V           | Out (VCC     | Out (VCC     | Out (VCC     | Out (VCC     |
+| 2   | Red    | 4.8V          | PWR          | PWR          | PWR          | PWR          |
+|     |        |               | Out (VCC     | Out (VCC     | Out (VCC     | Out (VCC     |
 |     |        |               | Unregulated) | Unregulated) | Unregulated) | Unregulated) |
 +-----+--------+---------------+--------------+--------------+--------------+--------------+
 | 3   | Blue   | 3.3V          | TX           | SCL          | ---          | ---          |
